@@ -6,6 +6,7 @@ list_of_training = [
     "ENDURANCE",
 ]
 
+# Selecting the type of trianing you'll ike to do NOTE: this will defer the different reps, sets and rest
 def type_of_training():
     while True:
         print("Please select the Type of Training: ", list_of_training)
@@ -25,6 +26,7 @@ list_of_muscles = [
     "FULL BODY",
 ]
 
+# Target muscle of what workout you'll like to do
 def target_muscle():
     while True:
         print("Please select the target muscle for exercise: ", list_of_muscles)
@@ -34,6 +36,8 @@ def target_muscle():
             return target_muscle_selected
         else:
             print("Muscle type not in the list, try again.")
+
+# === Just a list of workouts ===
 
 list_of_chest = [
     "Bench Press",
@@ -119,3 +123,5 @@ target_muscle_selected = target_muscle()
 workouts = pick_random_workouts(target_muscle_selected)
 
 print(f"Selected workouts for {target_muscle_selected}: {workouts}")
+
+# By Cy "still new to python
