@@ -115,7 +115,7 @@ muscle_to_exercises = {
 
 def pick_random_workouts(target_muscle):
     exercises = muscle_to_exercises[target_muscle]
-    selected_exercises = random.sample(exercises, 4)
+    selected_exercises = random.sample(exercises, 4) # Change k: 4 if you like to randomize more or less workouts
     return selected_exercises
 
 training = type_of_training()
