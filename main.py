@@ -124,4 +124,16 @@ workouts = pick_random_workouts(target_muscle_selected)
 
 print(f"Selected workouts for {target_muscle_selected}: {workouts}")
 
+def display_training():
+    if training == "HYPERTROPHY":
+        print("SETS: 3 | REPS: 8 - 10 | Rest: 60 seconds")
+        print("NOTE: 60% - 80% of 1-RM")
+    elif training == "STRENGTH":
+        print("SETS: 3 | REPS: 3 - 5 | Rest: 60 - 90 seconds")
+        print("NOTE: 85% - 100% of 1-RM")
+    elif training == "ENDURANCE":
+        print("SETS: 3 | REPS: 14 - 18 | Rest: 60 seconds")
+        print("NOTE: 30% - 60% of 1-RM")
+
+display_training()
 # By Cy "still new to python, ye
