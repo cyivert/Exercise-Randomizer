@@ -1,4 +1,8 @@
 import random, sys
+import time
+
+print("Hello, welcome to @cyiver.t Random Exercise Generator")
+time.sleep(3)
 
 list_of_training = [
     "HYPERTROPHY",
@@ -118,22 +122,35 @@ def pick_random_workouts(target_muscle):
     selected_exercises = random.sample(exercises, 4) # Change k: 4 if you like to randomize more or less workouts
     return selected_exercises
 
-training = type_of_training()
-target_muscle_selected = target_muscle()
-workouts = pick_random_workouts(target_muscle_selected)
-
-print(f"Selected workouts for {target_muscle_selected}: {workouts}")
-
-def display_training():
+def display_training(training):
     if training == "HYPERTROPHY":
-        print("SETS: 3 | REPS: 8 - 10 | Rest: 60 seconds")
-        print("NOTE: 60% - 80% of 1-RM")
+        return "SETS: 3 | REPS: 8 - 10 | Rest: 60 seconds\nNOTE: 60% - 80% of 1-RM"
     elif training == "STRENGTH":
-        print("SETS: 3 | REPS: 3 - 5 | Rest: 60 - 90 seconds")
-        print("NOTE: 85% - 100% of 1-RM")
+        return "SETS: 3 | REPS: 3 - 5 | Rest: 60 - 90 seconds\nNOTE: 85% - 100% of 1-RM"
     elif training == "ENDURANCE":
-        print("SETS: 3 | REPS: 14 - 18 | Rest: 60 seconds")
-        print("NOTE: 30% - 60% of 1-RM")
+        return "SETS: 3 | REPS: 14 - 18 | Rest: 60 seconds\nNOTE: 30% - 60% of 1-RM"
 
-display_training()
-# By Cy "still new to python, ye
+def main():
+    while True:
+        training = type_of_training()
+        target_muscle_selected = target_muscle()
+        workouts = pick_random_workouts(target_muscle_selected)
+
+        print(f"Selected workouts for {target_muscle_selected}: {workouts}")
+        training_details = display_training(training)
+        print(training_details)
+        # Credits to AI on this saving .txt file code
+        with open("selected_workouts.txt", "w") as file:
+            file.write(f"Type of Training: {training}\n")
+            file.write(f"Target Muscle: {target_muscle_selected}\n")
+            file.write(f"Selected Workouts: {', '.join(workouts)}\n")
+            file.write(f"Training Details:\n{training_details}\n")
+
+        again = input("Would you like to select again? (yes/no): ").strip().lower()
+        if again != 'yes':
+            break
+
+if __name__ == "__main__":
+    main()
+
+    # BY @cyiver.t

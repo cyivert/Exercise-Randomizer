@@ -1,0 +1,6 @@
+Type of Training: STRENGTH
+Target Muscle: CHEST
+Selected Workouts: Push-Ups, Cable Crossovers, Chest Press Machine, Pec Deck Machine
+Training Details:
+SETS: 3 | REPS: 3 - 5 | Rest: 60 - 90 seconds
+NOTE: 85% - 100% of 1-RM
