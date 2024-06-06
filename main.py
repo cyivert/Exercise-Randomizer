@@ -2,7 +2,7 @@ import random, sys
 import time
 
 print("Hello, welcome to @cyiver.t Random Exercise Generator")
-time.sleep(3)
+time.sleep(2)
 
 list_of_training = [
     "HYPERTROPHY",
@@ -42,6 +42,7 @@ def target_muscle():
             print("Muscle type not in the list, try again.")
 
 # === Just a list of workouts ===
+# I am pretty sure I can make this more efficient "I am still new coding and python but definitely comeback change it again if I can to be more efficient:
 
 list_of_chest = [
     "Bench Press",
@@ -105,7 +106,7 @@ list_of_legs = [
     "Step-Ups",
     "Glute Bridges",
 ]
-
+# For fullbody, I understand it's randomizer I will try to update this in the future in which really suggests fullbody workout not just random workouts from different workout lists.
 list_of_fullbody = list_of_chest + list_of_back + list_of_arms + list_of_shoulder + list_of_legs
 
 muscle_to_exercises = {
@@ -122,6 +123,7 @@ def pick_random_workouts(target_muscle):
     selected_exercises = random.sample(exercises, 4) # Change k: 4 if you like to randomize more or less workouts
     return selected_exercises
 
+#This list and display the # of sets, reps and rests in which training is chosen
 def display_training(training):
     if training == "HYPERTROPHY":
         return "SETS: 3 | REPS: 8 - 10 | Rest: 60 seconds\nNOTE: 60% - 80% of 1-RM"
