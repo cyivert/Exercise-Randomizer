@@ -139,7 +139,7 @@ def main():
         print(f"Selected workouts for {target_muscle_selected}: {workouts}")
         training_details = display_training(training)
         print(training_details)
-        # Credits to AI on this saving .txt file code
+        # Credits to AI on this saving/extracting as a .txt file
         with open("selected_workouts.txt", "w") as file:
             file.write(f"Type of Training: {training}\n")
             file.write(f"Target Muscle: {target_muscle_selected}\n")
