@@ -36,12 +36,14 @@ difficulty_level = {
 
 def my_difficulty_level():
     while True:
-        print("We have 3 categories of training difficulty level which are:")
+        print("Let's dig deepr and discover your training level")
         time.sleep(1)
+        print("We have 3 categories of training difficulty level which are:")
         for key, value in difficulty_level.items():
             print(f"{key}: {value}")
             time.sleep(1)
         print()
+        time.sleep(3)
         print("Please answer the following questions to determine your training difficulty level: ")
         print()
 
@@ -136,6 +138,7 @@ list_of_target_muscles = {
     "3": "Shoulders",
     "4": "Arms",
     "5": "Legs",
+    "6": "Full-body"
 }
 
 def target_muscle():
@@ -143,7 +146,7 @@ def target_muscle():
         print("Now please select the target muscles for the exercise:")
         for key, value in list_of_target_muscles.items():
             print(f"{key}: {value}")
-            time.sleep(1)
+            time.sleep(0.5)
         try:
             target_muscle_selected = int(input("Please select target muscle: "))
             if str(target_muscle_selected) in list_of_target_muscles.keys():
