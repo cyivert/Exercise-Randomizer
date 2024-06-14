@@ -59,18 +59,18 @@ def dyk_difficulty_level():
                             ("Q1: Resistance Training Experience",
                             "a. This will be my first experiences with structured resistance training. (1 points)",
                             "b. I have trained consistently for 6 months 2 years. (2 points)",
-                            "c. I have trained consistently for more than 2 years. (3 points)",),
+                            "c. I have trained consistently for more than 2 years. (3 points)"),
                             ("Q2: Recent Training Consistency",
                             "a. I have not trained recently, or it has been more than 3 months since I last trained. (1 point)",
                             "b. I trained 1-2 weeks ago. (2 points)",
-                            "c. I currently train 2-4 times per week. (3 points)",),
+                            "c. I currently train 2-4 times per week. (3 points)"),
                             ("Q3: General Daily Activity Level",
                             "a. I am mostly sedentary (e.g., desk job, little physical activity). (1 point)",
                             "b. I am somewhat active (e.g., recreational athlete, regular hikes). (2 points)",
                             "c. I am very active (e.g., daily physical exercise, athletic job). (3 points)"),
-                            ("Q4: Athletic Background"
+                            ("Q4: Athletic Background",
                             "a. I have no athletic background or participation in sports. (1 point)",
-                            "b. I played more than one sport in high school. (2 points)"
+                            "b. I played more than one sport in high school. (2 points)",
                             "c. I participated in college athletics or multiple sports beyond high school. (3 points)"),
                             ("Q5: Current Strength Level",
                             "a. I cannot perform a proper squat or deadlift with bodyweight, or cannot perform bodyweight chin-ups/push-ups. (1 point)",
@@ -105,6 +105,8 @@ def dyk_difficulty_level():
                             print("Your training difficulty level is Intermediate")
                         elif score > 14:
                             print("Your training difficulty level is Advanced")
+                            break
+                        print()
 
                 my_difficulty_level()
                 return determine_difficulty_level
@@ -113,13 +115,50 @@ def dyk_difficulty_level():
 
 dyk_difficulty_level()
 
-# -- After difficulty level is confirmed --
-#def difficulty_level_select(difficulty_level):
-#    while True:
-#        print("Select difficulty level:")
-#        for key, value in difficulty_level.items():
-#            print(f"{key}: {value}")
+def difficulty_level_select():
+    while True:
+        print("What is your training difficulty level?")
+        for key, value in difficulty_level.items():
+            print(f"{key}: {value}")
+            time.sleep(0.5)
+            try:
+                my_difficulty_level_selected = input("Please select a difficulty level: ")
+                if str(my_difficulty_level_selected) in difficulty_level.keys():
+                    print(f"Difficulty Level Seleted: {difficulty_level[my_difficulty_level_selected]}")
+                    return my_difficulty_level_selected
+                else:
+                    print("Invalid input. Please select a difficulty level.")
+            except ValueError:
+                print("Invalid input. Please select a difficulty level.")
 
-#difficulty_level_select(difficulty_level)
+difficulty_level_select()
+
+list_of_target_muscles = {
+    "1": "Chest",
+    "2": "Back",
+    "3": "Shoulders",
+    "4": "Arms",
+    "5": "Legs",
+}
+
+
+def target_muscle():
+    while True:
+        print("Now please select the target muscles for the exercise:")
+        for key, value in list_of_target_muscles.items():
+            print(f"{key}: {value}")
+            time.sleep(1)
+        try:
+            target_muscle_selected = int(input("Please select target muscle: "))
+            if str(target_muscle_selected) in list_of_target_muscles.keys():
+                print(f"Target muscle selected: {list_of_target_muscles[str(target_muscle_selected)]}")
+                return target_muscle_selected
+            else:
+                print("Invalid input. Please enter a valid number.")
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+
+target_muscle()
 
 
