@@ -159,4 +159,25 @@ def target_muscle():
 
 target_muscle()
 
-#Hmm
+list_of_place = {
+    "1": "Home",
+    "2": "Gym",
+}
+def workout_place_select():
+    while True:
+        print("Now please select the workout place for the exercise:")
+        for key, value in list_of_place.items():
+            print(f"{key}: {value}")
+            time.sleep(0.5)
+        try:
+            workout_place_selected = int(input("Please select workout place: "))
+            if str(workout_place_selected) in list_of_place.keys():
+                print(f"Workout place selected: {list_of_place[str(workout_place_selected)]}")
+                return workout_place_selected
+            else:
+                print("Invalid input. Please enter a valid number.")
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
+
+workout_place_select()
+
