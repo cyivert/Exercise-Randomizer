@@ -135,10 +135,11 @@ difficulty_level_select()
 list_of_target_muscles = {
     "1": "Chest",
     "2": "Back",
-    "3": "Shoulders",
-    "4": "Arms",
-    "5": "Legs",
-    "6": "Full-body"
+    "3": "Core",
+    "4": "Shoulders",
+    "5": "Arms",
+    "6": "Legs",
+    "7": "Full-body"
 }
 
 def target_muscle():
@@ -181,4 +182,123 @@ def workout_place_select():
 
 workout_place_select()
 
-#Hm
+list_of_atHome_workouts = {
+    "Chest": {
+        "Beginner": [
+            "Knee Push-Ups",
+            "Incline Push-Ups",
+            "Standard-Push-Ups",
+            "Resistance Band Chest Press",
+            "Dumbbell Chest Press",
+            "Wall Push-Ups",
+            "Chest Dips on a Chair",
+            "Resistance Band Pull Apart",
+            "Floor Press with Dumbbells",
+            "Incline Chest Press with Dumbbells",
+            "Resistance Band Chest Fly",
+            "Floor Fly with Dumbbells",
+        ],
+        "Intermediate": [
+            "Standard Push-Ups",
+            "Wide Grip Push-Ups",
+            "Narrow Push-Ups",
+            "Resistance Band Chest Fly",
+            "Dumbbell Chest Fly",
+            "Decline Push-Ups",
+            "Plyometric Push-Ups",
+            "Staggered Push-Ups",
+            "Archer Push-Ups"
+            "Dumbbell Pullover",
+            "Resistance Band Incline Press"
+            "Resistance Band Decline Press"
+        ],
+        "Advanced": [
+            "Decline Push-Ups",
+            "Plyometric (w/ Clap) Push-Ups",
+            "Push-Up Hold",
+            "Resistance Band Incline Press",
+            "Resistance Band Decline Press",
+            "Dumbbell Pullover",
+            "Incline Dumbbell Chest Press",
+            "Decline Dumbbell Chest Press",
+            "Incline Dumbbell Fly",
+            "Decline Dumbbell Fly",
+            "Single-Arm Dumbbell Chest Press",
+            "Spiderman Push-Ups"
+        ],
+    },
+    "Back": {
+        "Beginner": [],
+        "Intermediate": [],
+        "Advanced": [],
+    },
+    "Core": {
+        "Beginner": [],
+        "Intermediate": [],
+        "Advanced": [],
+    },
+    "Shoulders": {
+        "Beginner": [],
+        "Intermediate": [],
+        "Advanced": [],
+    },
+    "Arms": {
+        "Beginner": [],
+        "Intermediate": [],
+        "Advanced": [],
+    },
+    "Legs": {
+        "Beginner": [],
+        "Intermediate": [],
+        "Advanced": [],
+    },
+    "Full-body": {
+        "Beginner": [],
+        "Intermediate": [],
+        "Advanced": [],
+    },
+}
+
+list_of_atGym_workouts = {
+    "Chest": {
+        "Beginner": [],
+        "Intermediate": [],
+        "Advanced": [],
+    },
+    "Back": {
+        "Beginner": [],
+        "Intermediate": [],
+        "Advanced": [],
+    },
+    "Core": {
+        "Beginner": [],
+        "Intermediate": [],
+        "Advanced": [],
+    },
+    "Shoulders": {
+        "Beginner": [],
+        "Intermediate": [],
+        "Advanced": [],
+    },
+    "Arms": {
+        "Beginner": [],
+        "Intermediate": [],
+        "Advanced": [],
+    },
+    "Legs": {
+        "Beginner": [],
+        "Intermediate": [],
+        "Advanced": [],
+    },
+    "Full-body": {
+        "Beginner": [],
+        "Intermediate": [],
+        "Advanced": [],
+    },
+}
+
+def workout_randomize_select():
+    while True:
+        print()
+
+workout_randomize_select()
