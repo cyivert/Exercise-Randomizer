@@ -316,7 +316,7 @@ atHome_core_workouts = {
         "Around the World Planks"
     ],
 }
-atHome_shoulder_workouts = {
+atHome_shoulders_workouts = {
     "Beginner": [
         "Arm Circles",
         "Front Raises",
@@ -453,11 +453,39 @@ atHome_legs_workouts = {
 
 #At Gym Workouts
 atGym_chest_workouts = {
-    "",
+    "Beginner": [],
+    "Intermediate": [],
+    "Advanced": [],
 }
 
 atGym_back_workouts = {
-    "",
+    "Beginner": [],
+    "Intermediate": [],
+    "Advanced": [],
+}
+
+atGym_core_workouts = {
+    "Beginner": [],
+    "Intermediate": [],
+    "Advanced": [],
+}
+
+atGym_shoulders_workouts = {
+    "Beginner": [],
+    "Intermediate": [],
+    "Advanced": [],
+}
+
+atGym_arms_workouts = {
+    "Beginner": [],
+    "Intermediate": [],
+    "Advanced": [],
+}
+
+atGym_legs_workouts = {
+    "Beginner": [],
+    "Intermediate": [],
+    "Advanced": [],
 }
 
 def workout_randomize_select():
