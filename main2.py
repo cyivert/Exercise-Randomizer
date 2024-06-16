@@ -164,6 +164,7 @@ list_of_place = {
     "1": "Home",
     "2": "Gym",
 }
+
 def workout_place_select():
     while True:
         print("Now please select the workout place for the exercise:")
@@ -450,7 +451,14 @@ atHome_legs_workouts = {
     ],
 }
 
+#At Gym Workouts
+atGym_chest_workouts = {
+    "",
+}
 
+atGym_back_workouts = {
+    "",
+}
 
 def workout_randomize_select():
     while True:
