@@ -453,39 +453,273 @@ atHome_legs_workouts = {
 
 #At Gym Workouts
 atGym_chest_workouts = {
-    "Beginner": [],
-    "Intermediate": [],
-    "Advanced": [],
+    "Beginner": [
+        "Machine Chest Press",
+        "Incline Machine Press",
+        "Pec Deck Machine",
+        "Smith Machine Bench Press",
+        "Dumbbell Bench Press",
+        "Incline Dumbbell Bench Press",
+        "Cable Chest Fly",
+        "Chest Press Machine",
+        "Push-Ups",
+        "Incline Push-Ups",
+        "Dumbbell Flyes",
+        "Seated Chest Press"
+    ],
+    "Intermediate": [
+        "Barbell Bench Press",
+        "Incline Barbell Bench Press",
+        "Decline Barbell Bench Press",
+        "Dumbbell Flyes on Stability Ball",
+        "Cable Crossovers",
+        "Smith Machine Incline Press",
+        "Incline Dumbbell Flyes",
+        "Decline Dumbbell Press",
+        "Bodyweight Dips",
+        "Weighted Push-Ups",
+        "Landmine Press",
+        "Machine Flyes"
+    ],
+    "Advanced": [
+        "Weighted Dips",
+        "Barbell Bench Press (Heavy)",
+        "Incline Barbell Bench Press (Heavy)",
+        "Decline Barbell Bench Press (Heavy)",
+        "Single-Arm Dumbbell Press",
+        "Cable Flyes (Low to High)",
+        "Cable Flyes (High to Low)",
+        "Incline Dumbbell Flyes (Heavy)",
+        "Smith Machine Decline Press",
+        "Chest Dips with Weight Plate",
+        "Banded Push-Ups",
+        "Single-Arm Cable Press"
+    ],
 }
 
 atGym_back_workouts = {
-    "Beginner": [],
-    "Intermediate": [],
-    "Advanced": [],
+    "Beginner": [
+        "Lat Pulldowns",
+        "Seated Cable Rows",
+        "Machine Rows",
+        "Assisted Pull-Ups",
+        "T-Bar Row Machine",
+        "Bent-Over Dumbbell Rows",
+        "Hyperextensions",
+        "Straight-Arm Pulldowns",
+        "Single-Arm Cable Rows",
+        "Inverted Rows",
+        "Machine Pullovers",
+        "Dumbbell Shrugs"
+    ],
+    "Intermediate": [
+        "Barbell Rows",
+        "T-Bar Rows",
+        "Single-Arm Dumbbell Rows",
+        "Cable Face Pulls",
+        "Wide Grip Pull-Ups",
+        "Chin-Ups",
+        "Deadlifts",
+        "Landmine Rows",
+        "Seal Rows",
+        "Incline Dumbbell Rows",
+        "Chest Supported Rows",
+        "Rack Pulls"
+    ],
+    "Advanced": [
+        "Weighted Pull-Ups",
+        "Weighted Chin-Ups",
+        "Pendlay Rows",
+        "Deficit Deadlifts",
+        "Snatch Grip Deadlifts",
+        "Single-Arm T-Bar Rows",
+        "Kroc Rows",
+        "Wide Grip Pull-Ups (Weighted)",
+        "Meadows Rows",
+        "Trap Bar Deadlifts",
+        "Cable High Rows",
+        "Deadlift to Shrug"
+    ],
 }
 
 atGym_core_workouts = {
-    "Beginner": [],
-    "Intermediate": [],
-    "Advanced": [],
+    "Beginner": [
+        "Ab Crunch Machine",
+        "Cable Crunches",
+        "Leg Raises",
+        "Plank",
+        "Russian Twists with Medicine Ball",
+        "Hanging Knee Raises",
+        "Sit-Ups",
+        "Bicycle Crunches",
+        "Flutter Kicks",
+        "Mountain Climbers",
+        "Seated Ab Twists",
+        "Medicine Ball Slams"
+    ],
+    "Intermediate": [
+        "Hanging Leg Raises",
+        "Cable Woodchoppers",
+        "Ab Rollouts",
+        "Decline Sit-Ups",
+        "Toe Touches",
+        "V-Ups",
+        "Windshield Wipers",
+        "Dragon Flags",
+        "Plank with Shoulder Taps",
+        "Medicine Ball Sit-Ups",
+        "Side Plank",
+        "Cable Reverse Crunch"
+    ],
+    "Advanced": [
+        "Dragon Flags",
+        "L-Sit",
+        "Hanging Windshield Wipers",
+        "Standing Ab Wheel Rollouts",
+        "Weighted Decline Sit-Ups",
+        "Cable Oblique Crunches",
+        "Landmine Rotations",
+        "Rope Climbs",
+        "Advanced Plank Variations (One Arm, One Leg)",
+        "Weighted Hanging Leg Raises",
+        "Cable Pallof Press",
+        "Decline Russian Twists"
+    ],
 }
 
 atGym_shoulders_workouts = {
-    "Beginner": [],
-    "Intermediate": [],
-    "Advanced": [],
+    "Beginner": [
+        "Seated Dumbbell Press",
+        "Machine Shoulder Press",
+        "Lateral Raises",
+        "Front Raises",
+        "Reverse Pec Deck",
+        "Cable Lateral Raises",
+        "Cable Front Raises",
+        "Machine Lateral Raises",
+        "Dumbbell Shrugs",
+        "Face Pulls",
+        "Arnold Press",
+        "Push-Ups"
+    ],
+    "Intermediate": [
+        "Standing Barbell Press",
+        "Dumbbell Lateral Raises (Heavy)",
+        "Cable Upright Rows",
+        "Single-Arm Dumbbell Press",
+        "Seated Barbell Press",
+        "Dumbbell Front Raises (Heavy)",
+        "Dumbbell Rear Delt Flyes",
+        "Landmine Press",
+        "Smith Machine Shoulder Press",
+        "Dumbbell High Pull",
+        "Plate Raises",
+        "Reverse Flyes"
+    ],
+    "Advanced": [
+        "Push Press",
+        "Handstand Push-Ups",
+        "Z-Press",
+        "Dumbbell Press (Heavy)",
+        "Arnold Press (Heavy)",
+        "Snatch Grip Press",
+        "Cable Y Raises",
+        "Overhead Squat Press",
+        "Barbell Shrugs",
+        "Cable Rear Delt Flyes",
+        "Single-Arm Cable Press",
+        "Barbell Front Raises"
+    ],
 }
 
 atGym_arms_workouts = {
-    "Beginner": [],
-    "Intermediate": [],
-    "Advanced": [],
+    "Beginner": [
+        "Bicep Curl Machine",
+        "Tricep Pushdown",
+        "Dumbbell Bicep Curls",
+        "Tricep Dips (Machine)",
+        "Hammer Curls",
+        "Cable Tricep Extensions",
+        "Preacher Curl Machine",
+        "Overhead Dumbbell Tricep Extension",
+        "Cable Bicep Curls",
+        "Resistance Band Curls",
+        "Resistance Band Tricep Pushdowns",
+        "Concentration Curls"
+    ],
+    "Intermediate": [
+        "Barbell Curls",
+        "Skull Crushers",
+        "Close-Grip Bench Press",
+        "EZ Bar Curls",
+        "Dumbbell Skull Crushers",
+        "Reverse Curls",
+        "Tricep Kickbacks",
+        "Cable Rope Curls",
+        "Cable Overhead Tricep Extension",
+        "Incline Dumbbell Curls",
+        "Spider Curls",
+        "Tricep Dips (Weighted)"
+    ],
+    "Advanced": [
+        "21s (Bicep Curls)",
+        "Close-Grip Pull-Ups",
+        "Weighted Dips",
+        "Drag Curls",
+        "One-Arm Tricep Push-Ups",
+        "Barbell Spider Curls",
+        "Cable Tricep Kickbacks",
+        "Incline Curl to Press",
+        "Reverse Grip Tricep Pushdown",
+        "Single-Arm Cable Curl",
+        "Concentration Curls (Heavy)",
+        "Bodyweight Tricep Extensions"
+    ],
 }
 
 atGym_legs_workouts = {
-    "Beginner": [],
-    "Intermediate": [],
-    "Advanced": [],
+    "Beginner": [
+        "Leg Press",
+        "Machine Squats",
+        "Hamstring Curl Machine",
+        "Leg Extension Machine",
+        "Calf Raise Machine",
+        "Goblet Squats",
+        "Dumbbell Lunges",
+        "Smith Machine Squats",
+        "Seated Calf Raises",
+        "Leg Adduction Machine",
+        "Leg Abduction Machine",
+        "Bodyweight Squats"
+    ],
+    "Intermediate": [
+        "Barbell Squats",
+        "Romanian Deadlifts",
+        "Walking Lunges",
+        "Bulgarian Split Squats",
+        "Hack Squats",
+        "Front Squats",
+        "Good Mornings",
+        "Barbell Hip Thrusts",
+        "Leg Press (Heavy)",
+        "Single-Leg Deadlifts",
+        "Box Jumps",
+        "Standing Calf Raises (Heavy)"
+    ],
+    "Advanced": [
+        "Deadlifts",
+        "Squat Jumps",
+        "Pistol Squats",
+        "Barbell Step-Ups",
+        "Deficit Deadlifts",
+        "Sumo Squats",
+        "Split Squats (Heavy)",
+        "Barbell Lunges",
+        "Trap Bar Deadlifts",
+        "Jefferson Squats",
+        "Overhead Squats",
+        "Weighted Box Jumps"
+    ],
 }
 
 def workout_randomize_select():
