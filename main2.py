@@ -316,6 +316,7 @@ atHome_core_workouts = {
         "Around the World Planks"
     ],
 }
+
 atHome_shoulders_workouts = {
     "Beginner": [
         "Arm Circles",
@@ -722,4 +723,76 @@ atGym_legs_workouts = {
     ],
 }
 
+
 def generate_workout():
+    while True:
+        workout_place = workout_place_select()
+        target_muscle_selected = target_muscle()
+        difficulty_level_selected = difficulty_level_select()
+
+        if workout_place == 1:  # Home
+            while True:
+                if target_muscle_selected == 1:  # Chest
+                    workout = random.choice(atHome_chest_workouts[difficulty_level_selected])
+                elif target_muscle_selected == 2:  # Back
+                    workout = random.choice(atHome_back_workouts[difficulty_level_selected])
+                elif target_muscle_selected == 3:  # Core
+                    workout = random.choice(atHome_core_workouts[difficulty_level_selected])
+                elif target_muscle_selected == 4:  # Shoulders
+                    workout = random.choice(atHome_shoulders_workouts[difficulty_level_selected])
+                elif target_muscle_selected == 5:  # Arms
+                    workout = random.choice(atHome_arms_workouts[difficulty_level_selected])
+                elif target_muscle_selected == 6:  # Legs
+                    workout = random.choice(atHome_legs_workouts[difficulty_level_selected])
+                elif target_muscle_selected == 7:  # Full-body
+                    workout = random.choice(atHome_chest_workouts[difficulty_level_selected] +
+                                            atHome_back_workouts[difficulty_level_selected] +
+                                            atHome_core_workouts[difficulty_level_selected] +
+                                            atHome_shoulders_workouts[difficulty_level_selected] +
+                                            atHome_arms_workouts[difficulty_level_selected] +
+                                            atHome_legs_workouts[difficulty_level_selected])
+
+                # Check if there are at least 5 workouts for the selected muscle and difficulty level
+                if len(workout) >= 5:
+                    break  # Exit the loop if there are enough workouts
+                else:
+                    print("Not enough workouts for this muscle group and difficulty level. Reselecting...")
+        else:  # Gym
+            while True:
+                if target_muscle_selected == 1:  # Chest
+                    workout = random.choice(atGym_chest_workouts[difficulty_level_selected])
+                elif target_muscle_selected == 2:  # Back
+                    workout = random.choice(atGym_back_workouts[difficulty_level_selected])
+                elif target_muscle_selected == 3:  # Core
+                    workout = random.choice(atGym_core_workouts[difficulty_level_selected])
+                elif target_muscle_selected == 4:  # Shoulders
+                    workout = random.choice(atGym_shoulders_workouts[difficulty_level_selected])
+                elif target_muscle_selected == 5:  # Arms
+                    workout = random.choice(atGym_arms_workouts[difficulty_level_selected])
+                elif target_muscle_selected == 6:  # Legs
+                    workout = random.choice(atGym_legs_workouts[difficulty_level_selected])
+                elif target_muscle_selected == 7:  # Full-body
+                    workout = random.choice(atGym_chest_workouts[difficulty_level_selected] +
+                                            atGym_back_workouts[difficulty_level_selected] +
+                                            atGym_core_workouts[difficulty_level_selected] +
+                                            atGym_shoulders_workouts[difficulty_level_selected] +
+                                            atGym_arms_workouts[difficulty_level_selected] +
+                                            atGym_legs_workouts[difficulty_level_selected])
+
+                # Check if there are at least 5 workouts for the selected muscle and difficulty level
+                if len(workout) >= 5:
+                    break  # Exit the loop if there are enough workouts
+                else:
+                    print("Not enough workouts for this muscle group and difficulty level. Reselecting...")
+
+        print(f"Your random workout is: {workout}\n")
+
+        # Ask if the user wants to generate another workout
+        while True:
+            repeat = input("Would you like to generate another workout? (Y/N): ")
+            if repeat.lower() == "y":
+                break
+            elif repeat.lower() == "n":
+                return
+            else:
+                print("Invalid input. Please enter either Y or N.")
