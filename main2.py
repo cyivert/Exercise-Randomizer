@@ -730,7 +730,7 @@ def generate_workout():
         target_muscle_selected = target_muscle()
         difficulty_level_selected = difficulty_level_select()
 
-        if workout_place == 1:  # Home
+        if workout_place == 1:  # AKA Home
             while True:
                 if target_muscle_selected == 1:  # Chest
                     workout = random.choice(atHome_chest_workouts[difficulty_level_selected])
@@ -796,3 +796,7 @@ def generate_workout():
                 return
             else:
                 print("Invalid input. Please enter either Y or N.")
+
+generate_workout()
+
+#Theres a bug...
