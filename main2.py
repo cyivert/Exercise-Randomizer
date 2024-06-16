@@ -183,7 +183,7 @@ def workout_place_select():
 
 workout_place_select()
 
-#At home exercises
+# List of workouts at Home
 atHome_chest_workouts = {
     "Beginner": [
         "Knee Push-Ups",
@@ -451,7 +451,7 @@ atHome_legs_workouts = {
     ],
 }
 
-#At Gym Workouts
+# List of workouts at Gym
 atGym_chest_workouts = {
     "Beginner": [
         "Machine Chest Press",
@@ -722,8 +722,4 @@ atGym_legs_workouts = {
     ],
 }
 
-def workout_randomize_select():
-    while True:
-        print()
-
-workout_randomize_select()
+def generate_workout():
