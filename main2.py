@@ -1,9 +1,9 @@
 import random
-import sys
 import time
+import itertools
+
 
 print("Welcome to Cy Exercise Generator")
-time.sleep(1)
 
 type_of_training_list = {
     "1": "Hypertrophy",
@@ -26,7 +26,7 @@ def type_of_training():
         except ValueError:
             print("Invalid input. Please enter a valid number.")
 
-type_of_training()
+            type_of_training()
 
 difficulty_level = {
     "1": "Beginner",
@@ -115,7 +115,7 @@ def dyk_difficulty_level():
             elif determine_difficulty_level.lower() == "n":
                 return
 
-dyk_difficulty_level()
+            dyk_difficulty_level()
 
 def difficulty_level_select():
     while True:
@@ -129,7 +129,7 @@ def difficulty_level_select():
         else:
             print("Invalid input. Please select a difficulty level.")
 
-difficulty_level_select()
+            difficulty_level_select()
 
 list_of_target_muscles = {
     "1": "Chest",
@@ -156,7 +156,7 @@ def target_muscle():
         except ValueError:
             print("Invalid input. Please enter a valid number.")
 
-target_muscle()
+            target_muscle()
 
 list_of_place = {
     "1": "Home",
@@ -178,7 +178,7 @@ def workout_place_select():
         except ValueError:
             print("Invalid input. Please enter a valid number.")
 
-workout_place_select()
+            workout_place_select()
 
 # List of workouts at Home
 atHome_chest_workouts = {
@@ -720,57 +720,61 @@ atGym_legs_workouts = {
     ],
 }
 
-# variables for def workout_generate():
-training = type_of_training()
-difficulty = difficulty_level_select()
-place = workout_place_select()
-muscle = target_muscle()
+atHome_workouts = {
+    "Chest": atHome_chest_workouts,
+    "Back": atHome_back_workouts,
+    "Core": atHome_core_workouts,
+    "Shoulders": atHome_shoulders_workouts,
+    "Arms": atHome_arms_workouts,
+    "Legs": atHome_legs_workouts,
+}
 
-def workout_generate():
-    selected_training = type_of_training_list[str(training)]
-    selected_difficulty_level = difficulty_level[str(difficulty)]
-    workout_place = list_of_place[str(place)]
-    target_muscles = list_of_target_muscles[str(muscle)]
+atGym_workouts = {
+    "Chest": atGym_chest_workouts,
+    "Back": atGym_back_workouts,
+    "Core": atGym_core_workouts,
+    "Shoulders": atGym_shoulders_workouts,
+    "Arms": atGym_arms_workouts,
+    "Legs": atGym_legs_workouts,
+}
 
-    if workout_place == "1":
-        chest_workouts = atHome_chest_workouts[selected_difficulty_level]
-        back_workouts = atHome_back_workouts[selected_difficulty_level]
-        core_workouts = atHome_core_workouts[selected_difficulty_level]
-        shoulders_workouts = atHome_shoulders_workouts[selected_difficulty_level]
-        arms_workouts = atHome_arms_workouts[selected_difficulty_level]
-        legs_workouts = atHome_legs_workouts[selected_difficulty_level]
-    elif workout_place == "2":
-        chest_workouts = atGym_chest_workouts[selected_difficulty_level]
-        back_workouts = atGym_back_workouts[selected_difficulty_level]
-        core_workouts = atGym_core_workouts[selected_difficulty_level]
-        shoulders_workouts = atGym_shoulders_workouts[selected_difficulty_level]
-        arms_workouts = atGym_arms_workouts[selected_difficulty_level]
-        legs_workouts = atGym_legs_workouts[selected_difficulty_level]
+def generate_random_workouts(training_type, difficulty, target_muscle, place):
 
-    print("Your Workout:")
-    print(f"Type of training: {selected_training}")
-    print(f"Difficulty level: {selected_difficulty_level}")
-    print(f"Workout place: {workout_place}")
-    print(f"Target muscles: {target_muscles}")
+    workouts = []
 
-    if target_muscles == "7":
-        full_body_workout = []
-        full_body_workout.append(random.choice(chest_workouts))
-        full_body_workout.append(random.choice(back_workouts))
-        full_body_workout.append(random.choice(core_workouts))
-        full_body_workout.append(random.choice(core_workouts))
-        full_body_workout.append(random.choice(shoulders_workouts))
-        full_body_workout.append(random.choice(arms_workouts))
-        full_body_workout.append(random.choice(legs_workouts))
-        for exercise in full_body_workout:
-            print(exercise)
+    # Get the appropriate workout dictionary based on place
+    workout_dict = atHome_workouts if place == 1 else atGym_workouts
+
+    # Select the muscle group's workouts based on target_muscle
+    muscle_workouts = workout_dict.get(list_of_target_muscles[str(target_muscle)])
+
+    # Get workouts for the selected difficulty level
+    if muscle_workouts:
+        workouts = muscle_workouts.get(difficulty_level[str(difficulty)])
+
+    if not workouts:
+        print("No workouts found for the selected criteria. Please try again.")
+        return []
     else:
-        print("Selecting random exercises.")
-        print(f"Chest: {random.choice(chest_workouts)}")
-        print(f"Back: {random.choice(back_workouts)}")
-        print(f"Core: {random.choice(core_workouts)}")
-        print(f"Shoulders: {random.choice(shoulders_workouts)}")
-        print(f"Arms: {random.choice(arms_workouts)}")
-        print(f"Legs: {random.choice(legs_workouts)}")
+        num_workouts = {1: 4, 2: 5}.get(training_type, 10)  # Default to 10
+        return random.sample(workouts, num_workouts)  # Return unique workouts
 
-workout_generate()
+# Get user input for all parameters
+training_selected = type_of_training()
+
+dyk_difficulty_level()  # Call the function to ask about the difficulty level
+
+difficulty_level_selected = difficulty_level_select()
+target_muscle_selected = target_muscle()
+workout_place_selected = workout_place_select()
+
+
+# Generate and display the workouts
+workout_list = generate_random_workouts(
+    training_selected, difficulty_level_selected, target_muscle_selected, workout_place_selected
+)
+
+if workout_list:
+    print("\nYour personalized workout routine:")
+    for i, workout in enumerate(workout_list, start=1):
+        print(f"{i}. {workout}")
