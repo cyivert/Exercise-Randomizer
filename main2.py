@@ -766,9 +766,7 @@ def workout_generate():
             print(exercise)
     else:
         print("Selecting random exercises.")
-        print(f"Chest workouts: {chest_workouts}")
         print(f"Chest: {random.choice(chest_workouts)}")
-
         print(f"Back: {random.choice(back_workouts)}")
         print(f"Core: {random.choice(core_workouts)}")
         print(f"Shoulders: {random.choice(shoulders_workouts)}")
