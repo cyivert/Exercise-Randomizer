@@ -1,6 +1,5 @@
 import random
 import time
-import itertools
 
 
 print("Welcome to Cy Exercise Generator")
