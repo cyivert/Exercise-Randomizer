@@ -778,5 +778,6 @@ if workout_list:
     for i, workout in enumerate(workout_list, start=1):
         print(f"{i}. {workout}")
 
-# Next function listing all input variables and workouts
-# Next function extracting .txt
+# This function acts as a confirmation if satisfied with the workout or not.
+def workout_satisfaction():
+    print("Are you satisfied?")
