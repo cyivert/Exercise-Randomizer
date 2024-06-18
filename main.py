@@ -777,3 +777,6 @@ if workout_list:
     print("\nYour personalized workout routine:")
     for i, workout in enumerate(workout_list, start=1):
         print(f"{i}. {workout}")
+
+# Next function listing all input variables and workouts
+# Next function extracting .txt
