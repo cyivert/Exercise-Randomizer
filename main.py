@@ -736,26 +736,26 @@ atGym_workouts = {
     "Arms": atGym_arms_workouts,
     "Legs": atGym_legs_workouts,
 }
-
+# Generates random workouts.
 def generate_random_workouts(training_type, difficulty, target_muscle, place):
 
     workouts = []
 
-    # Get the appropriate workout dictionary based on place
     workout_dict = atHome_workouts if place == 1 else atGym_workouts
 
-    # Select the muscle group's workouts based on target_muscle
-    muscle_workouts = workout_dict.get(list_of_target_muscles[str(target_muscle)])
-
-    # Get workouts for the selected difficulty level
-    if muscle_workouts:
-        workouts = muscle_workouts.get(difficulty_level[str(difficulty)])
+    if target_muscle == 7:  # Full-body workout
+        for muscle_group in workout_dict.keys():
+            workouts.extend(workout_dict[muscle_group][difficulty_level[str(difficulty)]])
+    else:
+        muscle_workouts = workout_dict.get(list_of_target_muscles[str(target_muscle)])
+        if muscle_workouts:
+            workouts = muscle_workouts.get(difficulty_level[str(difficulty)])
 
     if not workouts:
         print("No workouts found for the selected criteria. Please try again.")
         return []
     else:
-        num_workouts = {1: 4, 2: 5}.get(training_type, 10)  # Default to 10
+        num_workouts = {1: 4, 2: 5}.get(training_type, 5)  # Default to 10 for other types
         return random.sample(workouts, num_workouts)  # Return unique workouts
 
 # Get user input for all parameters
@@ -780,4 +780,4 @@ if workout_list:
 
 # This function acts as a confirmation if satisfied with the workout or not.
 def workout_satisfaction():
-    print("Are you satisfied?")
+    print("Satisfied?")
