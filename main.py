@@ -1,7 +1,6 @@
 import random
 import time
 
-
 print("Welcome to Cy Exercise Generator")
 
 type_of_training_list = {
@@ -10,16 +9,17 @@ type_of_training_list = {
     "3": "Endurance",
 }
 
+
 def type_of_training():
     while True:
         print("Type of trainings:")
         for key, value in type_of_training_list.items():
             print(f"{key}: {value}")
         try:
-            training_selected = int(input("Please select a type of training: "))
-            if str(training_selected) in type_of_training_list.keys():
-                print(f"Type of training selected: {type_of_training_list[str(training_selected)]}")
-                return training_selected
+            type_training_selected = int(input("Please select a type of training: "))
+            if str(type_training_selected) in type_of_training_list.keys():
+                print(f"Type of training selected: {type_of_training_list[str(type_training_selected)]}")
+                return type_training_selected
             else:
                 print("Invalid Type of Training")
         except ValueError:
@@ -27,11 +27,13 @@ def type_of_training():
 
             type_of_training()
 
+
 difficulty_level = {
     "1": "Beginner",
     "2": "Intermediate",
     "3": "Advanced",
 }
+
 
 def my_difficulty_level():
     while True:
@@ -48,29 +50,33 @@ def my_difficulty_level():
 
         questions = [
             ("Q1: Resistance Training Experience",
-            "a. This will be my first experience with structured resistance training. (1 point)",
-            "b. I have trained consistently for 6 months to 2 years. (2 points)",
-            "c. I have trained consistently for more than 2 years. (3 points)"),
+             "a. This will be my first experience with structured resistance training. (1 point)",
+             "b. I have trained consistently for 6 months to 2 years. (2 points)",
+             "c. I have trained consistently for more than 2 years. (3 points)"),
             ("Q2: Recent Training Consistency",
-            "a. I have not trained recently, or it has been more than 3 months since I last trained. (1 point)",
-            "b. I trained 1-2 weeks ago. (2 points)",
-            "c. I currently train 2-4 times per week. (3 points)"),
+             "a. I have not trained recently, or it has been more than 3 months since I last trained. (1 point)",
+             "b. I trained 1-2 weeks ago. (2 points)",
+             "c. I currently train 2-4 times per week. (3 points)"),
             ("Q3: General Daily Activity Level",
-            "a. I am mostly sedentary (e.g., desk job, little physical activity). (1 point)",
-            "b. I am somewhat active (e.g., recreational athlete, regular hikes). (2 points)",
-            "c. I am very active (e.g., daily physical exercise, athletic job). (3 points)"),
+             "a. I am mostly sedentary (e.g., desk job, little physical activity). (1 point)",
+             "b. I am somewhat active (e.g., recreational athlete, regular hikes). (2 points)",
+             "c. I am very active (e.g., daily physical exercise, athletic job). (3 points)"),
             ("Q4: Athletic Background",
-            "a. I have no athletic background or participation in sports. (1 point)",
-            "b. I played more than one sport in high school. (2 points)",
-            "c. I participated in college athletics or multiple sports beyond high school. (3 points)"),
+             "a. I have no athletic background or participation in sports. (1 point)",
+             "b. I played more than one sport in high school. (2 points)",
+             "c. I participated in college athletics or multiple sports beyond high school. (3 points)"),
             ("Q5: Current Strength Level",
-            "a. I cannot perform a proper squat or deadlift with bodyweight, or cannot perform bodyweight chin-ups/push-ups. (1 point)",
-            "b. I can perform a squat/deadlift with bodyweight, and multiple chin-ups/push-ups. (2 points)",
-            "c. I can perform a squat/deadlift with 1.5 times bodyweight, advanced press, or bench press with bodyweight. (3 points)"),
+             "a. I cannot perform a proper squat or deadlift with bodyweight, or cannot perform bodyweight "
+             "chin-ups/push-ups. (1 point)",
+             "b. I can perform a squat/deadlift with bodyweight, and multiple chin-ups/push-ups. (2 points)",
+             "c. I can perform a squat/deadlift with 1.5 times bodyweight, advanced press, or bench press with "
+             "bodyweight. (3 points)"),
             ("Q6: Recovery Practices",
-            "a. I rarely focus on recovery (e.g., insufficient sleep, no stretching, poor nutrition). (1 point)",
-            "b. I occasionally focus on recovery (e.g., irregular sleep, occasional stretching, moderate nutrition). (2 points)",
-            "c. I consistently focus on recovery (e.g., regular sleep, daily stretching, balanced nutrition). (3 points)"),
+             "a. I rarely focus on recovery (e.g., insufficient sleep, no stretching, poor nutrition). (1 point)",
+             "b. I occasionally focus on recovery (e.g., irregular sleep, occasional stretching, moderate nutrition)."
+             "(2 points)",
+             "c. I consistently focus on recovery (e.g., regular sleep, daily stretching, balanced nutrition)."
+             "(3 points)"),
         ]
 
         answers = []
@@ -99,6 +105,7 @@ def my_difficulty_level():
         break
     print()
 
+
 def dyk_difficulty_level():
     while True:
         print("Do you know your training difficulty level?")
@@ -116,6 +123,7 @@ def dyk_difficulty_level():
 
             dyk_difficulty_level()
 
+
 def difficulty_level_select():
     while True:
         print("What is your training difficulty level?")
@@ -130,6 +138,7 @@ def difficulty_level_select():
 
             difficulty_level_select()
 
+
 list_of_target_muscles = {
     "1": "Chest",
     "2": "Back",
@@ -140,16 +149,17 @@ list_of_target_muscles = {
     "7": "Full-body"
 }
 
+
 def target_muscle():
     while True:
         print("Now please select the target muscles for the exercise:")
         for key, value in list_of_target_muscles.items():
             print(f"{key}: {value}")
         try:
-            target_muscle_selected = int(input("Please select target muscle: "))
-            if str(target_muscle_selected) in list_of_target_muscles.keys():
-                print(f"Target muscle selected: {list_of_target_muscles[str(target_muscle_selected)]}")
-                return target_muscle_selected
+            targetmuscle_selected = int(input("Please select target muscle: "))
+            if str(targetmuscle_selected) in list_of_target_muscles.keys():
+                print(f"Target muscle selected: {list_of_target_muscles[str(targetmuscle_selected)]}")
+                return targetmuscle_selected
             else:
                 print("Invalid input. Please enter a valid number.")
         except ValueError:
@@ -157,10 +167,12 @@ def target_muscle():
 
             target_muscle()
 
+
 list_of_place = {
     "1": "Home",
     "2": "Gym",
 }
+
 
 def workout_place_select():
     while True:
@@ -168,16 +180,17 @@ def workout_place_select():
         for key, value in list_of_place.items():
             print(f"{key}: {value}")
         try:
-            workout_place_selected = int(input("Please select workout place: "))
-            if str(workout_place_selected) in list_of_place.keys():
-                print(f"Workout place selected: {list_of_place[str(workout_place_selected)]}")
-                return workout_place_selected
+            workoutplace_selected = int(input("Please select workout place: "))
+            if str(workoutplace_selected) in list_of_place.keys():
+                print(f"Workout place selected: {list_of_place[str(workoutplace_selected)]}")
+                return workoutplace_selected
             else:
                 print("Invalid input. Please enter a valid number.")
         except ValueError:
             print("Invalid input. Please enter a valid number.")
 
             workout_place_select()
+
 
 # List of workouts at Home
 atHome_chest_workouts = {
@@ -327,7 +340,7 @@ atHome_shoulders_workouts = {
         "Reverse Fly",
         "Overhead Press",
         "Scapular Wall Slides",
-        ],
+    ],
     "Intermediate": [
         "Handstand hold Against Wall",
         "Push-Up to Shoulder Tap",
@@ -341,7 +354,7 @@ atHome_shoulders_workouts = {
         "Dumbbell Shrugs",
         "Y Raises",
         "Resistance Band Pul Apart",
-        ],
+    ],
     "Advanced": [
         "Handstand Push-Ups",
         "Lateral Raise to Front Raise",
@@ -355,8 +368,8 @@ atHome_shoulders_workouts = {
         "Single-Arm Plank",
         "Resistance Band High Pulls",
         "T Push-Ups",
-        ],
-    }
+    ],
+}
 
 atHome_arms_workouts = {
     "Beginner": [
@@ -736,9 +749,10 @@ atGym_workouts = {
     "Arms": atGym_arms_workouts,
     "Legs": atGym_legs_workouts,
 }
+
+
 # Generates random workouts.
 def generate_random_workouts(training_type, difficulty, target_muscle, place):
-
     workouts = []
 
     workout_dict = atHome_workouts if place == 1 else atGym_workouts
@@ -758,6 +772,7 @@ def generate_random_workouts(training_type, difficulty, target_muscle, place):
         num_workouts = {1: 4, 2: 5}.get(training_type, 5)  # Default to 10 for other types
         return random.sample(workouts, num_workouts)  # Return unique workouts
 
+
 # Get user input for all parameters
 training_selected = type_of_training()
 
@@ -766,7 +781,6 @@ dyk_difficulty_level()  # Call the function to ask about the difficulty level
 difficulty_level_selected = difficulty_level_select()
 target_muscle_selected = target_muscle()
 workout_place_selected = workout_place_select()
-
 
 # Generate and display the workouts
 workout_list = generate_random_workouts(
@@ -778,6 +792,39 @@ if workout_list:
     for i, workout in enumerate(workout_list, start=1):
         print(f"{i}. {workout}")
 
+
 # Question function if user is satisfied or not. If not randomize again or select atHome or atGym.
-def workout_satisfaction():
-    print("Satisfied?")
+def workout_satisfaction(workout_place_selected=workout_place_selected):
+    print("Satisfied with the workout routine?")
+    while True:
+        satisfaction = input("(Y/N): ")
+        if satisfaction.lower() == "y":
+            print("Great! Keep up the good work!")
+            break
+        elif satisfaction.lower() == "n":
+            print("Would you like to randomize again or select a workout place?")
+            randomize_or_select = input("(R) Randomize / (S) Select: ")
+            if randomize_or_select.lower() == "r":
+                workout_list = generate_random_workouts(
+                    training_selected, difficulty_level_selected, target_muscle_selected, workout_place_selected
+                )
+                if workout_list:
+                    print("\nYour personalized workout routine:")
+                    for i, workout in enumerate(workout_list, start=1):
+                        print(f"{i}. {workout}")
+            elif randomize_or_select.lower() == "s":
+                workout_place_selected = workout_place_select()
+                workout_list = generate_random_workouts(
+                    training_selected, difficulty_level_selected, target_muscle_selected, workout_place_selected
+                )
+                if workout_list:
+                    print("\nYour personalized workout routine:")
+                    for i, workout in enumerate(workout_list, start=1):
+                        print(f"{i}. {workout}")
+            workout_satisfaction(workout_place_selected)
+            break
+        else:
+            print("Invalid input. Please enter either Y or N.")
+            continue
+
+workout_satisfaction()
