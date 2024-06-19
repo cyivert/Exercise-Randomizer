@@ -356,7 +356,7 @@ atHome_shoulders_workouts = {
         "Resistance Band High Pulls",
         "T Push-Ups",
         ],
-    },
+    }
 
 atHome_arms_workouts = {
     "Beginner": [
@@ -778,6 +778,6 @@ if workout_list:
     for i, workout in enumerate(workout_list, start=1):
         print(f"{i}. {workout}")
 
-# This function acts as a confirmation if satisfied with the workout or not.
+# Question function if user is satisfied or not. If not randomize again or select atHome or atGym.
 def workout_satisfaction():
     print("Satisfied?")
