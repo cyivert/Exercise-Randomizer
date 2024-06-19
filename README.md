@@ -20,7 +20,7 @@ The Exercise Randomizer is a Python application that allows users to generate wo
 
 - **Random Workout Generation**: Generate random workouts for home or gym settings.
 - **Customization**: Select the type of exercises and equipment available.
-- **User-Friendly Interface**: Simple and intuitive GUI built with Tkinter.
+- **User-Friendly Interface**: Simple and intuitive GUI built with Tkinter. (Coming Soon)
 - **Python-Based**: Leverages Python's robust libraries for seamless functionality.
 
 ## Installation
