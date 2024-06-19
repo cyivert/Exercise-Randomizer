@@ -1,7 +1,3 @@
-Here is a README for your GitHub repository:
-
----
-
 # Exercise Randomizer
 
 Welcome to the Exercise Randomizer! This project is designed to help users generate randomized workout routines tailored to their preferences, whether they prefer to work out at home or at the gym.
