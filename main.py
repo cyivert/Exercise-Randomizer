@@ -9,7 +9,8 @@ type_of_training_list = {
     "3": "Endurance",
 }
 
-
+# At the moment a useless function, but can be used to add functions to the training types such as:
+# different number of workouts, different number of sets, different number of reps, etc.
 def type_of_training():
     while True:
         print("Type of trainings:")
@@ -826,5 +827,6 @@ def workout_satisfaction(workout_place_selected=workout_place_selected):
         else:
             print("Invalid input. Please enter either Y or N.")
             continue
+
 
 workout_satisfaction()
