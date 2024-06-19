@@ -9,9 +9,10 @@ type_of_training_list = {
     "3": "Endurance",
 }
 
-# At the moment a useless function, but can be used to add functions to the training types such as:
-# different number of workouts, different number of sets, different number of reps, etc.
+
+# This function will ask the user to select the type of training they would like to do.
 def type_of_training():
+    global type_training_selected
     while True:
         print("Type of trainings:")
         for key, value in type_of_training_list.items():
@@ -20,6 +21,17 @@ def type_of_training():
             type_training_selected = int(input("Please select a type of training: "))
             if str(type_training_selected) in type_of_training_list.keys():
                 print(f"Type of training selected: {type_of_training_list[str(type_training_selected)]}")
+
+                if type_training_selected == 1:
+                    print("Hypetrophy Training:")
+                    print("SETS: 3 | REPS: 8 - 10 | Rest: 60 seconds\nNOTE: 60% - 80% of 1-RM")
+                elif type_training_selected == 2:
+                    print("Strength Training:")
+                    print("SETS: 3 | REPS: 3 - 5 | Rest: 60 - 90 seconds\nNOTE: 85% - 100% of 1-RM")
+                elif type_training_selected == 3:
+                    print("Endurance Training:")
+                    print("SETS: 3 | REPS: 14 - 18 | Rest: 60 seconds\nNOTE: 30% - 60% of 1-RM")
+
                 return type_training_selected
             else:
                 print("Invalid Type of Training")
@@ -36,6 +48,7 @@ difficulty_level = {
 }
 
 
+# This function will ask the user to select the difficulty level of their training.
 def my_difficulty_level():
     while True:
         print("Let's dig deepr and discover your training level")
@@ -107,6 +120,7 @@ def my_difficulty_level():
     print()
 
 
+# This function will ask the user if they know their training difficulty level.
 def dyk_difficulty_level():
     while True:
         print("Do you know your training difficulty level?")
@@ -125,6 +139,7 @@ def dyk_difficulty_level():
             dyk_difficulty_level()
 
 
+# This function will ask the user to select the difficulty level of their training.
 def difficulty_level_select():
     while True:
         print("What is your training difficulty level?")
@@ -136,8 +151,6 @@ def difficulty_level_select():
             return my_difficulty_level_selected
         else:
             print("Invalid input. Please select a difficulty level.")
-
-            difficulty_level_select()
 
 
 list_of_target_muscles = {
@@ -151,6 +164,7 @@ list_of_target_muscles = {
 }
 
 
+# This function will ask the user to select the target muscle for their exercise.
 def target_muscle():
     while True:
         print("Now please select the target muscles for the exercise:")
@@ -175,6 +189,7 @@ list_of_place = {
 }
 
 
+# This function will ask the user to select the workout place for the exercise.
 def workout_place_select():
     while True:
         print("Now please select the workout place for the exercise:")
@@ -752,7 +767,7 @@ atGym_workouts = {
 }
 
 
-# Generates random workouts.
+# This function will generate random workouts based on the user's input.
 def generate_random_workouts(training_type, difficulty, target_muscle, place):
     workouts = []
 
@@ -794,7 +809,7 @@ if workout_list:
         print(f"{i}. {workout}")
 
 
-# Question function if user is satisfied or not. If not randomize again or select atHome or atGym.
+# This function will ask the user if they are satisfied with the workout routine.
 def workout_satisfaction(workout_place_selected=workout_place_selected):
     print("Satisfied with the workout routine?")
     while True:
@@ -830,3 +845,39 @@ def workout_satisfaction(workout_place_selected=workout_place_selected):
 
 
 workout_satisfaction()
+
+
+# This function will ask the user if they would like to save the workout routine as a .txt file.
+def saving_as_txt():
+    print("Would you like to save the workout routine as a .txt file?")
+    while True:
+        save_txt = input("(Y/N): ")
+        if save_txt.lower() == "y":
+            with open("selected_workouts.txt", "w") as file:
+                file.write(f"Type of Training: {type_of_training_list[str(training_selected)]}\n")
+                if training_selected == 1:
+                    file.write("Hypetrophy Training:\n")
+                    file.write("SETS: 3 | REPS: 8 - 10 | Rest: 60 seconds\nNOTE: 60% - 80% of 1-RM\n")
+                elif training_selected == 2:
+                    file.write("Strength Training:\n")
+                    file.write("SETS: 3 | REPS: 3 - 5 | Rest: 60 - 90 seconds\nNOTE: 85% - 100% of 1-RM\n")
+                elif training_selected == 3:
+                    file.write("Endurance Training:\n")
+                    file.write("SETS: 3 | REPS: 14 - 18 | Rest: 60 seconds\nNOTE: 30% - 60% of 1-RM\n")
+                file.write(f"Target Muscle: {list_of_target_muscles[str(target_muscle_selected)]}\n")
+                file.write(f"Workout Place: {list_of_place[str(workout_place_selected)]}\n")
+                file.write(f"Difficulty Level: {difficulty_level[str(difficulty_level_selected)]}\n")
+                file.write("\nWorkout Routine:\n")
+                for i, workout in enumerate(workout_list, start=1):
+                    file.write(f"{i}. {workout}\n")
+            print("Workout routine saved as selected_workouts.txt")
+            break
+        elif save_txt.lower() == "n":
+            print("Workout routine not saved.")
+            break
+        else:
+            print("Invalid input. Please enter either Y or N.")
+            continue
+
+
+saving_as_txt()
