@@ -1,5 +1,4 @@
-('C:\\Users\\cyive\\PycharmProjects\\Random Exercise '
- 'Listser\\build\\main\\PYZ-00.pyz',
+('C:\\Users\\cyive\\PycharmProjects\\Exercise-Randomizer\\build\\main\\PYZ-00.pyz',
  [('_compat_pickle',
    'C:\\Users\\cyive\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\_compat_pickle.py',
    'PYMODULE'),
